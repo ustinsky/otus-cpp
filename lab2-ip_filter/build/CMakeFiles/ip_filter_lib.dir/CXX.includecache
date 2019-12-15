@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lex/Документы/otus-cpp/lab2/my/lib.cpp
+lib.h
+/home/lex/Документы/otus-cpp/lab2/my/lib.h
+
+/home/lex/Документы/otus-cpp/lab2/my/lib.h
+iostream
+-
+tuple
+-
+vector
+-
+algorithm
+-
+cassert
+-
+
