@@ -198,19 +198,19 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
         
     }
 
-    // // Работа с map: Smart Allocator
-    // BOOST_AUTO_TEST_CASE(test_map_smart)
-    // {
-    //     std::cout << "Map: Smart allocator" << std::endl;
-    //     try {
-    //         test_map<smart_allocator<std::pair<const int, int>>>();
-    //         BOOST_CHECK( true );
-    //     }
-    //     catch (const std::exception &) {
-    //         BOOST_CHECK( false );
-    //     } 
+    // Работа с map: Smart Allocator
+    BOOST_AUTO_TEST_CASE(test_map_smart)
+    {
+        std::cout << "Map: Smart allocator" << std::endl;
+        try {
+            test_map<smart_allocator<std::pair<const int, int>>>();
+            BOOST_CHECK( true );
+        }
+        catch (const std::exception &) {
+            BOOST_CHECK( false );
+        } 
         
-    // }
+    }
 
     // Работа с Linked_List: Standard Allocator
     BOOST_AUTO_TEST_CASE(test_list_standard)
