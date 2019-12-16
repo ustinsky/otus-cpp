@@ -28,10 +28,10 @@ void test_vector() {
         auto v = std::vector<int, Alloc>{};
         timer.start("start");
         v.reserve(2 * size_container);
-        // for (size_t i = 0; i < size_container; ++i) {
-        //     v.emplace_back(i);
-        // }
-        // time[i] = timer.stop();
+        for (size_t i = 0; i < size_container; ++i) {
+            v.emplace_back(i);
+        }
+        time[i] = timer.stop();
     
         // timer.start("Vector Use");
         // int sum = 0; 
