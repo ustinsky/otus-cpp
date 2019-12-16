@@ -10,9 +10,7 @@ int factorial(int n) {
 
 
 int main() {
-    // return test();
-
-    test();
+    // test();
 
     // Map
     auto m = std::map<int, int>{};

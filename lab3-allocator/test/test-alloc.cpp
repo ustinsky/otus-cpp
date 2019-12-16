@@ -26,8 +26,8 @@ void test_vector() {
     
     for (int i = 0; i < size_test; ++i) {
         auto v = std::vector<int, Alloc>{};
-        // timer.start("start");
-        // v.reserve(2 * size_container);
+        timer.start("start");
+        v.reserve(2 * size_container);
         // for (size_t i = 0; i < size_container; ++i) {
         //     v.emplace_back(i);
         // }
