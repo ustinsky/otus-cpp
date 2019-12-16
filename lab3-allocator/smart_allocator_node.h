@@ -141,6 +141,7 @@ public:
 
     virtual ~MChunk() {
         if (m_pool != nullptr) {
+            std::cout << "Очистка памяти по адресу: " << m_pool << std::endl;
             free(m_pool);
             m_pool = nullptr;
         }

@@ -6,7 +6,7 @@
 #include <vector>
 #include "smart_allocator_node.h"
 
-constexpr bool m_prettu_fun = false;
+constexpr bool m_prettu_fun = true;
 const size_t m_size_allocator = 10000; // Размер Chunk-а
 
 template<typename T, size_t m_capacity = m_size_allocator>
