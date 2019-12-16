@@ -125,14 +125,14 @@ public:
             m_size -= n;
 
             // Если размер стал равен 0. То имеет смысл освободить память
-            // if (m_size == 0) {
-            //     if (m_pool != nullptr) {
-            //         free(m_pool);
-            //         m_pool = nullptr;
+            if (m_size == 0) {
+                if (m_pool != nullptr) {
+                    free(m_pool);
+                    m_pool = nullptr;
 
-            //         return true;
-            //     }
-            // }
+                    return true;
+                }
+            }
             return true;
         } else {
             return false;
@@ -140,8 +140,8 @@ public:
     }
 
     virtual ~MChunk() {
-        if (m_pool != nullptr)
-            free(m_pool);
+        // if (m_pool != nullptr)
+            // free(m_pool);
     }
 
     void print_mat() {
