@@ -29,7 +29,7 @@ void test_vector() {
         timer.start("start");
         v.reserve(2 * size_container);
         for (size_t i = 0; i < size_container; ++i) {
-            v.emplace_back(i);
+            v.push_back(i);
         }
         time[i] = timer.stop();
     
