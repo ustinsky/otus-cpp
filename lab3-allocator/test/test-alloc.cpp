@@ -253,19 +253,19 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
         
     }
 
-    // // Работа с Linked_List: Smart Allocator
-    // BOOST_AUTO_TEST_CASE(test_list_smart)
-    // {
-    //     std::cout << "List: Smart allocator" << std::endl;
-    //     try {
-    //         test_list<smart_allocator<int>>();
-    //         BOOST_CHECK( true );
-    //     }
-    //     catch (const std::exception &) {
-    //         BOOST_CHECK( false );
-    //     } 
+    // Работа с Linked_List: Smart Allocator
+    BOOST_AUTO_TEST_CASE(test_list_smart)
+    {
+        std::cout << "List: Smart allocator" << std::endl;
+        try {
+            test_list<smart_allocator<int>>();
+            BOOST_CHECK( true );
+        }
+        catch (const std::exception &) {
+            BOOST_CHECK( false );
+        } 
         
-    // }
+    }
 
 
 }
