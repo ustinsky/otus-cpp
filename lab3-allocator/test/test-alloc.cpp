@@ -16,7 +16,7 @@
 #include <boost/test/unit_test.hpp>
 
 const int size_test = 100;
-const int size_container = 1000;
+const int size_container = 100;
 
 template <class Alloc = std::allocator<int>>
 void test_vector() {
