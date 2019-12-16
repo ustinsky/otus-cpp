@@ -42,12 +42,11 @@
 # lab 3
 language: cpp
 before_script:
-- sudo apt-get install libboost-test-dev -y
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
-- sudo apt-get install -y software-properties-common
 - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
 - sudo apt-get update -qq
-- sudo apt-get install g++-7
+- sudo apt-get install -y software-properties-common
+- sudo apt-get install -y g++-7 libboost-test1.54-dev
 script:
 - cd lab3-allocator/
 - CXX=/usr/bin/g++-7 CC=/usr/bin/gcc-7
