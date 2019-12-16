@@ -129,25 +129,11 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
     }
 
     // // Работа с вектором: My Allocator
-    // BOOST_AUTO_TEST_CASE(test_vector_myalloc)
-    // {
-    //     std::cout << "Vector: My allocator" << std::endl;
-    //     try {
-    //         test_vector<my_allocator<int>>();
-    //         BOOST_CHECK( true );
-    //     }
-    //     catch (const std::exception &) {
-    //         BOOST_CHECK( false );
-    //     }
-        
-    // }
-
-    // Работа с вектором: Smart Allocator
-    BOOST_AUTO_TEST_CASE(test_vector_smart)
+    BOOST_AUTO_TEST_CASE(test_vector_myalloc)
     {
-        std::cout << "Vector: Smart allocator" << std::endl;
+        std::cout << "Vector: My allocator" << std::endl;
         try {
-            test_vector<smart_allocator<int, 20000 >>();
+            test_vector<my_allocator<int>>();
             BOOST_CHECK( true );
         }
         catch (const std::exception &) {
@@ -155,6 +141,20 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
         }
         
     }
+
+    // Работа с вектором: Smart Allocator
+    // BOOST_AUTO_TEST_CASE(test_vector_smart)
+    // {
+    //     std::cout << "Vector: Smart allocator" << std::endl;
+    //     try {
+    //         test_vector<smart_allocator<int, 20000 >>();
+    //         BOOST_CHECK( true );
+    //     }
+    //     catch (const std::exception &) {
+    //         BOOST_CHECK( false );
+    //     }
+        
+    // }
 
 
     // Работа с map: Standard Allocator
