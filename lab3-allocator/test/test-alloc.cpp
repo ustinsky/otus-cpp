@@ -26,19 +26,19 @@ void test_vector() {
     
     for (int i = 0; i < size_test; ++i) {
         auto v = std::vector<int, Alloc>{};
-        timer.start("start");
-        v.reserve(2 * size_container);
-        for (size_t i = 0; i < size_container; ++i) {
-            v.emplace_back(i);
-        }
-        time[i] = timer.stop();
+        // timer.start("start");
+        // v.reserve(2 * size_container);
+        // for (size_t i = 0; i < size_container; ++i) {
+        //     v.emplace_back(i);
+        // }
+        // time[i] = timer.stop();
     
-        timer.start("Vector Use");
-        int sum = 0; 
-        for (auto i: v) {
-            sum += i;
-        }
-        time2[i] = timer.stop();
+        // timer.start("Vector Use");
+        // int sum = 0; 
+        // for (auto i: v) {
+        //     sum += i;
+        // }
+        // time2[i] = timer.stop();
     }
 
     std::cout << "Среднее время создания вектора: " << (std::accumulate(time.begin(), time.end(), 0) / (double) size_test) << std::endl;
@@ -143,18 +143,18 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
     }
 
     // Работа с вектором: Smart Allocator
-    // BOOST_AUTO_TEST_CASE(test_vector_smart)
-    // {
-    //     std::cout << "Vector: Smart allocator" << std::endl;
-    //     try {
-    //         test_vector<smart_allocator<int>>();
-    //         BOOST_CHECK( true );
-    //     }
-    //     catch (const std::exception &) {
-    //         BOOST_CHECK( false );
-    //     }
+    BOOST_AUTO_TEST_CASE(test_vector_smart)
+    {
+        std::cout << "Vector: Smart allocator" << std::endl;
+        try {
+            test_vector<smart_allocator<int>>();
+            BOOST_CHECK( true );
+        }
+        catch (const std::exception &) {
+            BOOST_CHECK( false );
+        }
         
-    // }
+    }
 
 
     // Работа с map: Standard Allocator
