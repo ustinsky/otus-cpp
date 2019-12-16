@@ -141,7 +141,7 @@ public:
 
     virtual ~MChunk() {
         if (m_pool != nullptr) {
-            free(m_pool);
+            // free(m_pool);
             m_pool = nullptr;
         }
             

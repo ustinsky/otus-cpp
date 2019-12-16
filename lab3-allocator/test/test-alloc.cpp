@@ -33,12 +33,12 @@ void test_vector() {
         }
         time[i] = timer.stop();
     
-        // timer.start("Vector Use");
-        // int sum = 0; 
-        // for (auto i: v) {
-        //     sum += i;
-        // }
-        // time2[i] = timer.stop();
+        timer.start("Vector Use");
+        int sum = 0; 
+        for (auto i: v) {
+            sum += i;
+        }
+        time2[i] = timer.stop();
     }
 
     std::cout << "Среднее время создания вектора: " << (std::accumulate(time.begin(), time.end(), 0) / (double) size_test) << std::endl;
