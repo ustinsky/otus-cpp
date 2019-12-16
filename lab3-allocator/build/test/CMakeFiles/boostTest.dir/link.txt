@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/boostTest.dir/test-alloc.cpp.o  -o boostTest /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so ../liballocator_lib.a 

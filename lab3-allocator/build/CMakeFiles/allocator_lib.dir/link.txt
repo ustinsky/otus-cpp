@@ -1,2 +1,0 @@
-/usr/bin/ar qc liballocator_lib.a  CMakeFiles/allocator_lib.dir/test.cpp.o CMakeFiles/allocator_lib.dir/SimpleTimer.cpp.o CMakeFiles/allocator_lib.dir/list.cpp.o
-/usr/bin/ranlib liballocator_lib.a
