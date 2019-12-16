@@ -26,11 +26,7 @@ public:
 
     smart_allocator() {}
 
-    ~smart_allocator() {
-        for (auto i : sl) {
-            i.~smart_alloc_logic();
-        }
-    };
+    ~smart_allocator() = default;
 
     template<typename U> 
     smart_allocator(const smart_allocator<U>&) {}
