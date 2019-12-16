@@ -142,19 +142,19 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
         
     // }
 
-    // // Работа с вектором: Smart Allocator
-    // BOOST_AUTO_TEST_CASE(test_vector_smart)
-    // {
-    //     std::cout << "Vector: Smart allocator" << std::endl;
-    //     try {
-    //         test_vector<smart_allocator<int, 20000 >>();
-    //         BOOST_CHECK( true );
-    //     }
-    //     catch (const std::exception &) {
-    //         BOOST_CHECK( false );
-    //     }
+    // Работа с вектором: Smart Allocator
+    BOOST_AUTO_TEST_CASE(test_vector_smart)
+    {
+        std::cout << "Vector: Smart allocator" << std::endl;
+        try {
+            test_vector<smart_allocator<int, 20000 >>();
+            BOOST_CHECK( true );
+        }
+        catch (const std::exception &) {
+            BOOST_CHECK( false );
+        }
         
-    // }
+    }
 
 
     // Работа с map: Standard Allocator
@@ -184,19 +184,19 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
         
     }
 
-    // // Работа с map: My Allocator
-    // BOOST_AUTO_TEST_CASE(test_map_myalloc)
-    // {
-    //     std::cout << "Map: My allocator" << std::endl;
-    //     try {
-    //         test_map<my_allocator<std::pair<const int, int>>>();
-    //         BOOST_CHECK( true );
-    //     }
-    //     catch (const std::exception &) {
-    //         BOOST_CHECK( false );
-    //     } 
+    // Работа с map: My Allocator
+    BOOST_AUTO_TEST_CASE(test_map_myalloc)
+    {
+        std::cout << "Map: My allocator" << std::endl;
+        try {
+            test_map<my_allocator<std::pair<const int, int>>>();
+            BOOST_CHECK( true );
+        }
+        catch (const std::exception &) {
+            BOOST_CHECK( false );
+        } 
         
-    // }
+    }
 
     // // Работа с map: Smart Allocator
     // BOOST_AUTO_TEST_CASE(test_map_smart)
@@ -239,19 +239,19 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
         
     }
 
-    // // Работа с Linked_List: My Allocator
-    // BOOST_AUTO_TEST_CASE(test_list_myalloc)
-    // {
-    //     std::cout << "List: My allocator" << std::endl;
-    //     try {
-    //         test_list<my_allocator<int>>();
-    //         BOOST_CHECK( true );
-    //     }
-    //     catch (const std::exception &) {
-    //         BOOST_CHECK( false );
-    //     } 
+    // Работа с Linked_List: My Allocator
+    BOOST_AUTO_TEST_CASE(test_list_myalloc)
+    {
+        std::cout << "List: My allocator" << std::endl;
+        try {
+            test_list<my_allocator<int>>();
+            BOOST_CHECK( true );
+        }
+        catch (const std::exception &) {
+            BOOST_CHECK( false );
+        } 
         
-    // }
+    }
 
     // // Работа с Linked_List: Smart Allocator
     // BOOST_AUTO_TEST_CASE(test_list_smart)
