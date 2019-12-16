@@ -12,6 +12,8 @@ int factorial(int n) {
 int main() {
     // return test();
 
+    test();
+
     // Map
     auto m = std::map<int, int>{};
     for (size_t i = 0; i < 10; ++i) {
