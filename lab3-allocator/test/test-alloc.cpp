@@ -157,18 +157,18 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
     // }
 
 
-    // // Работа с map: Standard Allocator
-    // BOOST_AUTO_TEST_CASE(test_map_standard)
-    // {
-    //     std::cout << "Map: Standard allocator" << std::endl;
-    //     try {
-    //         test_map();
-    //         BOOST_CHECK( true );
-    //     }
-    //     catch (const std::exception &) {
-    //         BOOST_CHECK( false );
-    //     }    
-    // }
+    // Работа с map: Standard Allocator
+    BOOST_AUTO_TEST_CASE(test_map_standard)
+    {
+        std::cout << "Map: Standard allocator" << std::endl;
+        try {
+            test_map();
+            BOOST_CHECK( true );
+        }
+        catch (const std::exception &) {
+            BOOST_CHECK( false );
+        }    
+    }
 
     // // Работа с map: Simple Allocator
     // BOOST_AUTO_TEST_CASE(test_map_simple)
@@ -212,18 +212,18 @@ BOOST_AUTO_TEST_SUITE(test_alloc)
         
     // }
 
-    // // Работа с Linked_List: Standard Allocator
-    // BOOST_AUTO_TEST_CASE(test_list_standard)
-    // {
-    //     std::cout << "List: Standard allocator" << std::endl;
-    //     try {
-    //         test_list();
-    //         BOOST_CHECK( true );
-    //     }
-    //     catch (const std::exception &) {
-    //         BOOST_CHECK( false );
-    //     } 
-    // }
+    // Работа с Linked_List: Standard Allocator
+    BOOST_AUTO_TEST_CASE(test_list_standard)
+    {
+        std::cout << "List: Standard allocator" << std::endl;
+        try {
+            test_list();
+            BOOST_CHECK( true );
+        }
+        catch (const std::exception &) {
+            BOOST_CHECK( false );
+        } 
+    }
 
     // // Работа с Linked_List: Simple Allocator
     // BOOST_AUTO_TEST_CASE(test_list_simple)
