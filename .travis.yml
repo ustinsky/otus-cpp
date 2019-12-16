@@ -22,10 +22,10 @@
 
 language: cpp
 before_script:
-- sudo apt-get install g++-7 libboost-test-dev -y
+- sudo apt-get install libboost-test-dev -y
 - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
-- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
+# - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
 # - git clone https://github.com/google/googletest.git
 script:
 - cd lab2-ip_filter
