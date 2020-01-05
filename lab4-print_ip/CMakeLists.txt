@@ -33,7 +33,7 @@ set(CPACK_PACKAGE_CONTACT lex@mapha.org)
 
 include(CPack)
 
-enable_testing()
+enable_testing() 
 
 add_test(test print_test)
 
