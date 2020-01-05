@@ -40,26 +40,44 @@
 #   - curl -T ip_filter-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uustinsky:$BINTRAY_API_KEY "https://api.bintray.com/content/ustinsky/otus-cpp/ip_filter/$TRAVIS_BUILD_NUMBER/ip_filter-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
 
 # lab 3
+# dist: bionic
+# language: cpp
+# before_script:
+
+# # - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+# - sudo apt-get update -qq
+# - sudo apt-get install -qq g++-7 libboost-test-dev
+# # - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
+# script:
+# - cd lab3-allocator/
+# - CXX=/usr/bin/g++-7 CC=/usr/bin/gcc-7
+# - cmake .
+# - cmake --build .
+# - cmake --build . --target test
+# - cmake --build . --target package
+# deploy:
+#   provider: script
+#   skip_cleanup: true
+#   script:
+#   - curl -T allocator-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uustinsky:$BINTRAY_API_KEY "https://api.bintray.com/content/ustinsky/otus-cpp/allocator/$TRAVIS_BUILD_NUMBER/allocator-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+
+# lab 4
 dist: bionic
 language: cpp
 before_script:
-# - sudo apt install software-properties-common
-# https://github.com/Kitware/CMake/releases/download/v3.15.5/cmake-3.15.5.tar.gz
-# add-apt-repository ppa:boost-latest/ppa
-
-# - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 - sudo apt-get update -qq
 - sudo apt-get install -qq g++-7 libboost-test-dev
-# - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
+- sudo apt-get install libgtest-dev -y
 script:
-- cd lab3-allocator/
+- cd lab4-print_ip/
 - CXX=/usr/bin/g++-7 CC=/usr/bin/gcc-7
 - cmake .
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
+- doxygen
 deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T allocator-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uustinsky:$BINTRAY_API_KEY "https://api.bintray.com/content/ustinsky/otus-cpp/allocator/$TRAVIS_BUILD_NUMBER/allocator-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -T print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uustinsky:$BINTRAY_API_KEY "https://api.bintray.com/content/ustinsky/otus-cpp/allocator/$TRAVIS_BUILD_NUMBER/print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
